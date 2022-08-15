@@ -1,0 +1,44 @@
+
+.descri{
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: flex; */
+    color:#ff0094;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: 800;
+    font-size: 100%;
+    margin: auto;
+}
+
+.tenis{
+
+margin: 0px;
+border:0;
+
+}
+
+.home {
+    color:black;
+}
+
+.produto p {
+    color:black;
+    font-size: 16.5px;
+    width: 300px;
+    text-align: center;
+
+}
+
+.produtos{
+    display:flex;
+    justify-content: space-around;
+    margin: 25px;
+    flex-wrap: wrap;
+    font-family: nunitosans;
+}
+
+.produto{
+    cursor: pointer;
+    background-color: white;
+}

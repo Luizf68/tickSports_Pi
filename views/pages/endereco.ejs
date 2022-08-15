@@ -1,0 +1,68 @@
+<% - include('./partials/header') %>
+<main>
+
+    <div class="container">
+
+        <div class="cabecalho">
+            <h6>Enviar para</h6>
+            <span class="iconify" data-icon="fa-solid:shipping-fast" style="color: #ff007d;"></span>
+        </div>
+        <hr>
+        <p></p>
+
+        <div class="dados">
+            <label for="pais"> País ou região</label>
+            <select name="pais" id="pais">
+                <option value="Br"> Brasil </option>
+                <option value="Ar"> Argentina </option>
+                <option value="Ch"> Chile </option>
+                <option value="Ur">Uruguai</option>
+                <option value="Pr"> Paraguai </option>
+                <option value="Pe">Peru</option>
+                <option value="Co">Colombia</option>
+                <option value="Vz"> Venezuela </option>
+                <option value="Gu"> Guiana</option>
+            </select>
+        </div>
+        <p></p>
+
+        <div class="usuario">
+
+            <label for="nome"> Nome </label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            <label for="nome"> Sobrenome </label>
+            <input type="text" id="sobrenome" name=" sobrenome" placeholder="Digite seu sobrenome">
+        </div>
+        <p></p>
+
+        <div class="Ender">
+            <label for="endereco"> Endereço </label>
+            <input type="text" id="endereco" name=" endereco" placeholder="Endereço">
+        </div>
+
+
+        <div class="ender2">
+            <label for="estado"> Estado</label>
+            <input type="text" id="estado" name=" estado" placeholder="Seu Estado">
+            <p></p>
+            <label for="cidade"> Cidade </label>
+            <input type="text" id="cidade" name=" cidade" placeholder="Sua Cidade">
+            <label for="cep"> CEP </label>
+            <input type="text" id="cep" name=" cep" placeholder="CEP">
+        </div>
+
+
+        <div class=" ntel">
+            <label for="telefone"> Telefone </label>
+            <input type="text" id="telefone" name=" telefone" placeholder=Seu telefone>
+
+        </div>
+        
+        <div class="controle">
+
+            <button class="cancelar" type="reset"> Cancelar</button>
+            <button class="salvar" type="submit"> Salvar</button>
+        </div>
+</div>
+</main>
+<% - include('./partials/footer') %>
