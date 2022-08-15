@@ -1,0 +1,49 @@
+.roupas {
+    
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.painelroupas {
+    flex-direction: row;
+}
+
+.cardsroupas {
+    background-color: aqua;
+    height: 10vh;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titulo{
+    text-align: center;
+    color: pink;
+    margin-top: 35px;
+    height: 120px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.grade1{ 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.precoRoupa1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+}
+
+.ajuste{   
+    text-align: center;  
+}
