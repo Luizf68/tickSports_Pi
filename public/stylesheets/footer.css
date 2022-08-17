@@ -18,8 +18,8 @@ footer {
 
 }
 
-.painel {
-
+.painel { 
+ 
     display: flex;
     justify-content: center;
     align-items: center;

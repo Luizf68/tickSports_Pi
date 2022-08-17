@@ -4,7 +4,7 @@ const roupasController = {
         return res.render('roupas')
     }
 
-}
+} 
 
 
-module.exports = roupasController
+module.exports = roupasController 

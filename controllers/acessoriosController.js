@@ -4,6 +4,6 @@ const acessoriosController = {
         return res.render('acessorios')
     }
 
-}
+} 
 
-module.exports = acessoriosController
+module.exports = acessoriosController 

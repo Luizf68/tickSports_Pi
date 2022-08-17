@@ -5,5 +5,5 @@ const tenisController = {
     }
 
 }
-
-module.exports = tenisController
+ 
+module.exports = tenisController 

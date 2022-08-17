@@ -23,17 +23,17 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
-    font-family: nunitosans;
+    /* font-family: nunitosans; */
     background-color: #222222;
     height: 18vh;
     flex-wrap: wrap;
   }
     
-  main {
+  /* main {
     background: url("bg.jpg") no-repeat center center;
     background-size: cover;
     height: 92vh;
-  }
+  } */
     
   .nav-list {
     list-style: none;
@@ -129,7 +129,7 @@
     align-items: center;
     width: 30px;
   }
-  
+   
   .box {
     display: flex;
     padding: 5px;
