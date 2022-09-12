@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/organizador.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+
+</head>
+
+<header>
+
+    <%- include('./partials/header') %>
+
+</header>
+
+<main>
+
+<form action="/Entrar/Participante" id="form-cadastro" method="post">
+        <div class="modal fade modal-register" id="register" tabindex="-1" role="dialog" aria-labelledby="Cadastre-se"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content modal-register">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cadastro</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input id="idFacebook" data-val="true"
+                            data-val-length="O campo Facebook deve conter no máximo 45 Caracteres."
+                            data-val-length-max="45" name="IdFacebook" type="hidden" value="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form">
+                                    <label for="Nome">Nome</label>
+                                    <input class="" data-val="true" data-val-required="Nome obrigatório" id="Nome"
+                                        name="Nome" placeholder="Nome" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-for="Nome"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="md-form">
+                                    <label for="Sobrenome">Sobrenome</label>
+                                    <input class="" data-val="true" data-val-required="Sobrenome obrigatório"
+                                        id="Sobrenome" name="Sobrenome" placeholder="Sobrenome" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-for="Nome"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="input-radios PF" style="display:block">
+                                    <label class="info-register" for="Sexo">Gênero</label>
+                                    <div class="pure-radiobutton">
+                                        <input checked="checked" class="form-check-input" data-val="true"
+                                            data-val-required="Gênero obrigatório" id="feminino" name="Sexo"
+                                            type="radio" value="F">
+                                        <label for="feminino" class="form-check-label">Feminino</label>
+                                    </div>
+                                    <div class="pure-radiobutton">
+                                        <input class="form-check-input" id="masculino" name="Sexo" type="radio"
+                                            value="M">
+                                        <label for="masculino" class="form-check-label">Masculino</label>
+                                    </div>
+                                </div>
+
+                                <div class="md-form PJ" style="display:none">
+                                    <label class="info-register" for="NomeEmpresa">Nome da empresa</label>
+                                    <input class=" topper" data-val="true"
+                                        data-val-required="Nome da empresa obrigatório" id="NomeEmpresa"
+                                        name="NomeEmpresa" placeholder="Ticket Sports" type="text" value="">
+                                    <span class="field-validation-valid" data-valmsg-for="NomeEmpresa"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+
+                                <div class="md-form">
+                                    <label for="Telefone">Celular</label>
+                                    <input class="" data-val="true"
+                                        data-val-minlength="Este telefone não parece estar correto"
+                                        data-val-minlength-min="10" data-val-required="Celular obrigatório"
+                                        id="Telefone" name="Telefone" placeholder="DDD + Número" type="text" value=""
+                                        maxlength="15">
+                                    <span class="field-validation-valid" data-valmsg-for="Telefone"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="md-form">
+                                    <label for="Email">E-mail</label>
+                                    <input id="email" class="" data-val="true"
+                                        data-val-email="Este e-mail não parece estar correto"
+                                        data-val-required="E-mail obrigatório" name="Email"
+                                        placeholder="seuemail@dominio.com" type="email" value="">
+                                    <span class="field-validation-valid" data-valmsg-for="Email"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="md-form">
+                                    <label for="Senha">Senha</label>
+                                    <input class="" data-val="true" data-val-required="Senha obrigatório" id="Senha"
+                                        name="Senha" placeholder="●●●●●●●●" type="password" value="">
+                                    <span class="field-validation-valid" data-valmsg-for="Senha"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="md-form">
+                                    <label for="ConfirmarSenha">Confirmar senha</label>
+                                    <input class="" data-val="true"
+                                        data-val-equalto="'Confirmar senha' and 'Senha' do not match."
+                                        data-val-equalto-other="*.Senha" data-val-required="Confirmar senha obrigatório"
+                                        id="ConfirmarSenha" name="ConfirmarSenha" placeholder="●●●●●●●●" type="password"
+                                        value="">
+                                    <span class="field-validation-valid" data-valmsg-for="ConfirmarSenha"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form PF" style="display:block">
+                                    <label class="info-register" for="Nascimento">Nascimento</label>
+                                    <input class="" data-val="true" data-val-required="Nascimento obrigatório"
+                                        data-value="2022-09-11" id="Nascimento" name="Nascimento" type="date"
+                                        value="2022-09-11">
+                                    <span class="field-validation-valid" data-valmsg-for="Nascimento"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+
+                                <div class="md-form PJ" style="display:none">
+                                    <label class="info-register" for="DocumentoResponsavel">Documento
+                                        Responsável</label>
+                                    <input class=" topper" data-val="true"
+                                        data-val-required="Documento Responsável obrigatório" id="DocumentoResponsavel"
+                                        name="DocumentoResponsavel" placeholder="Documento do responsável" type="text"
+                                        value="" maxlength="14">
+                                    <span class="field-validation-valid" data-valmsg-for="DocumentoResponsavel"
+                                        data-valmsg-replace="true"></span>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 28px;">
+                                    <div class="col-md-5">
+                                        <div class="md-form" style="margin: 0;">
+                                            <label class="info-register active" for="TipoDocumento">Tipo</label>
+                                            <select class="mdb-select" data-val="true"
+                                                data-val-required="Tipo obrigatório" id="TipoDocumento"
+                                                name="TipoDocumento">
+                                                <option value="0">CPF</option>
+                                                <option value="2">Estrangeiro (RNE)</option>
+                                                <option value="3">Estrangeiro (Passaporte)</option>
+                                                <option value="5">CNPJ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="md-form">
+                                            <label class="info-register" for="Documento">Documento</label>
+                                            <input class=" topper" data-val="true"
+                                                data-val-required="Documento obrigatório" id="Documento"
+                                                name="Documento" placeholder="Número" type="text" value=""
+                                                maxlength="14">
+                                            <span class="field-validation-valid" data-valmsg-for="Documento"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input required concordo"
+                                        name="concorda-termos-compra" id="concorda-termos-compra">
+                                    <label class="custom-control-label" for="concorda-termos-compra">Li e concordo com
+                                        os <a style="        font-size: 14px !important;"
+                                            href="https://www.ticketsports.com.br/TermosCompra" target="_blank">Termos
+                                            de Compra</a>.</label>
+                                    <input data-val="true"
+                                        data-val-required="Concordo com os <a href='https://www.ticketsports.com.br/TermosCompra' target = '_blank'>termos do Ticket Sports</a>. obrigatório"
+                                        id="ConcordaTermos" name="ConcordaTermos" type="hidden" value="False">
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input required concordo"
+                                        name="concorda-politica-privacidade" id="concorda-politica-privacidade">
+                                    <label class="custom-control-label" for="concorda-politica-privacidade">Li e
+                                        concordo com as <a style="font-size: 14px !important;"
+                                            href="https://www.ticketsports.com.br/PoliticaPrivacidade"
+                                            target="_blank">Políticas de Privacidade</a>.</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" data-val="true"
+                                        data-val-required="Desejo receber eventos do calendário do Ticket Sports. obrigatório"
+                                        id="ConcordaReceberEventos" name="ConcordaReceberEventos" type="checkbox"
+                                        value="true"><input name="ConcordaReceberEventos" type="hidden" value="false">
+                                    <label class="custom-control-label" for="ConcordaReceberEventos">Desejo receber
+                                        eventos do calendário do Ticket Sports.</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" data-val="true"
+                                        data-val-required="Desejo receber promoções de parceiros do Ticket Sports. obrigatório"
+                                        id="ConcordaReceberPromocoes" name="ConcordaReceberPromocoes" type="checkbox"
+                                        value="true"><input name="ConcordaReceberPromocoes" type="hidden" value="false">
+                                    <label class="custom-control-label" for="ConcordaReceberPromocoes">Desejo receber
+                                        promoções de parceiros do Ticket Sports.</label>
+                                </div>
+                                <div class="text-left mt-4">
+                                    <label
+                                        style="font-size: 0.8rem;color: #F40023;display:none;padding-left: 4px;padding-top: 15px; "
+                                        id="login-facebook-error">Complete os seus dados para vincular sua conta do
+                                        Facebook.</label>
+                                    <button class="btn btn-default btn-login submit" type="submit" id="submitCadastrar"
+                                        disabled="">AVANÇAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="/Entrar/RecuperarSenhaAsync" id="esqueci-senha" method="post">
+        <div class="modal fade" id="modal-esqueci-senha" tabindex="-1" role="dialog"
+            aria-labelledby="Esqueci minha senha" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content modal-register">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Esqueci minha senha</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-card-1">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>Instruções de recuperação de senha serão enviadas à sua caixa de entrada.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mail-form-login">
+                                        <label for="login-email"
+                                            data-error="Este e-mail ou CPF não parece estar correto"
+                                            style="width: 100%;">E-mail ou CPF</label>
+                                        <input placeholder="seuemail@dominio.com" type="text" id="email-recuperacao"
+                                            class=" required" tabindex="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="border-top: none;">
+                            <button id="btn-enviar" type="submit" class="btn btn-default btn-login">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="modal-card-2" style="display: none;">
+                        <div class="modal-body text-center" style="padding-bottom: 4rem;">
+                            <div class="preloader-wrapper small active" style="margin-top: 1.5rem;">
+                                <div class="spinner-layer spinner-yellow-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-card-3" style="display: none;">
+                        <div class="modal-body">
+                            <p>Foi enviado a você instruções de como recuperar a sua senha.</p>
+                        </div>
+                        <div class="modal-footer" style="border-top: none;">
+                            <button type="button" class="btn btn-default btn-login" data-dismiss="modal"
+                                onclick="encerrarRecuperarSenha();">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+  </main>
+
+  <footer>
+  
+      <%- include('./partials/footer') %>
+  
+  </footer>

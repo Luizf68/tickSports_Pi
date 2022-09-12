@@ -4,10 +4,11 @@ var router = express.Router();
 
 
 const homeController = require('../controllers/homeController');
-const tenisController = require('../controllers/tenisController');
-const acessoriosController = require('../controllers/acessoriosController');
-const roupasController = require('../controllers/roupasController');
-const marcasController = require('../controllers/marcasController');
+const organizadorController = require('../controllers/organizadorController');
+const calendarioController = require('../controllers/calendarioController');
+const loginController = require('../controllers/loginController');
+
+
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
@@ -15,12 +16,12 @@ const marcasController = require('../controllers/marcasController');
 
 router.get('/home', homeController.index);
 
-router.get('/tenis', tenisController.index);
+router.get('/organizador', organizadorController.index);
 
-router.get('/acessorios', acessoriosController.index);
+router.get('/calendario', calendarioController.index);
 
-router.get('/roupas', roupasController.index);
+router.get('/login', loginController.index);
 
-router.get('/marcas', marcasController.index);
+
 
 module.exports = router; 

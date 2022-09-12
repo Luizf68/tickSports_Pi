@@ -1,1 +1,118 @@
- 
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    padding: 30px;
+    border-radius: 1rem;
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.card h1 {
+    color: #222!important;
+    font-size: 16px!important;
+}
+
+.card span.changeLogin {
+    font-size: 14px;
+}
+
+.card .md-form label {
+    width: 100%;
+}
+
+label {
+    font-size: 12.5px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+
+
+input, select, textarea {
+    border: 2px solid #09f;
+    padding: 0 20px;
+    font-size: 12.5px;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    height: 38px;
+    line-height: 38px;
+    color: #999;
+    box-shadow: none;
+    width: 100%;
+}
+input, select, button, a {
+    outline: none!important;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.card span.changeLogin a {
+    margin-left: 5px;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none!important;
+    transition: all .15s cubic-bezier(.4,0,.2,1);
+    color: #09f;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.card .text-center button.btn-login {
+    margin: 15px 0;
+    width: 100%;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.btn-default {
+    padding: 0 45px;
+    background: #09f;
+    color: #fff;
+    box-shadow: 0 1px 2px 0rgba(60,64,67,.302),0 1px 3px 1pxrgba(60,64,67,.149);
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.card a.enter-facebook {
+    margin-top: 20px;
+    background: #546bc9;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.card .options p {
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 14px;
+}

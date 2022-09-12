@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+
+</head>
+
+<header>
+
+    <%- include('./partials/header') %>
+
+</header>
+
+<main>
+
+
+
+    <link href="/bundles/login?v=YxOU0U_0UJhD85PeUlqTXWb2KVFAsRXlPYFy-Nfbz201" rel="stylesheet">
+
+    <link href="/bundles/checkbox?v=S701fC2PQZjZrZARZC7UCJNdXo2gDAs0QcYDbAN0RVk1" rel="stylesheet">
+
+
+    <section>
+        <div class="card">
+            <div class="card-block">
+                <header>
+                    <!--Header-->
+                    <h1>Login para participantes</h1>
+                    <span class="changeLogin">É um organizador?<a href="https://painel.ticketsports.com.br">Clique
+                            aqui.</a></span>
+                </header>
+                <!--Body-->
+                <div class="md-form mail-form-login">
+                    <label for="login-email" data-error="Este e-mail ou CPF não parece estar correto">E-mail ou
+                        CPF</label>
+                    <input placeholder="seuemail@dominio.com" type="text" id="login-email" class=" required"
+                        tabindex="1">
+                </div>
+                <div class="md-form mail-form-password">
+                    <label for="login-password" data-error="Esta senha não parece estar correta">Senha</label>
+                    <input placeholder="●●●●●●●●" type="password" id="login-password" class=" required" tabindex="2">
+                </div>
+                <div class="text-right">
+                    <a data-toggle="modal" data-target="#modal-esqueci-senha" class="a-sub-item"
+                        href="javascript:void(0);" id="recover-button">Esqueci</a>
+                </div>
+                <div class="text-center">
+                    <label style="font-size: 0.8rem;color: #F40023;display:none;" id="login-error">E-mail e/ou senha
+                        inválidos.<br>Novo no Ticket Sports? <a href="#" data-toggle="modal" id="register-button"
+                            data-target="#register" style="color: #FFBE00;">Cadastre-se</a></label>
+                    <button class="btn btn-default btn-login" id="login-button" tabindex="3">AVANÇAR</button>
+                    <hr>
+                </div>
+                <footer>
+                    <a id="facebook-login" class="enter-facebook btn" href="#"><i class="fa fa-facebook fa-2x"
+                            aria-hidden="true"></i>Entrar com o Facebook</a>
+                    <div class="options">
+                        <p>Novo no Ticket Sports? <a href="#" data-toggle="modal" id="register-button"
+                                data-target="#register">Cadastre-se</a></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer>
+
+    <%- include('./partials/footer') %>
+
+</footer>
