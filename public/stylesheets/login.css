@@ -22,8 +22,8 @@
 }
 
 .card h1 {
-    color: #222!important;
-    font-size: 16px!important;
+    color: #222;
+    font-size: 16px;
 }
 
 .card span.changeLogin {
@@ -58,7 +58,7 @@ input, select, textarea {
     width: 100%;
 }
 input, select, button, a {
-    outline: none!important;
+    outline: none;
 }
 button, input {
     overflow: visible;
@@ -76,7 +76,7 @@ button, input, optgroup, select, textarea {
 
 a {
     font-size: 14px;
-    text-decoration: none!important;
+    text-decoration: none;
     transition: all .15s cubic-bezier(.4,0,.2,1);
     color: #09f;
 }
@@ -89,7 +89,7 @@ a {
     margin: 15px 0;
     width: 100%;
 }
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button {
     cursor: pointer;
 }
 .btn-default {
@@ -116,3 +116,8 @@ a {
     text-align: center;
     font-size: 14px;
 }
+
+.card span.changeLogin a {
+    margin-left: 5px;
+}
+
